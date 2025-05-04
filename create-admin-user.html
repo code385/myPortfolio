@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin User | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body class="admin-body">
+    <div class="admin-login-container">
+        <div class="admin-login-box">
+            <div class="login-header">
+                <h1>Create Admin User</h1>
+                <p>Set up an admin account for your portfolio</p>
+            </div>
+            
+            <div id="createUserMessage" class="message-box" style="display: none;"></div>
+            
+            <form id="createUserForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter password (min 8 characters)" required minlength="8">
+                        <button type="button" id="togglePassword" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required minlength="8">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" id="createUserBtn" class="btn-primary">Create Admin User</button>
+                </div>
+            </form>
+            
+            <div class="admin-info-box">
+                <h3>Important Information</h3>
+                <p>This page should only be used once to create your admin account. After creating your account:</p>
+                <ol>
+                    <li>Go to the <a href="admin-login.html">Admin Login</a> page to sign in</li>
+                    <li>From there, you can manage blog posts and contact form submissions</li>
+                    <li>For security reasons, consider password-protecting or removing this page after use</li>
+                </ol>
+            </div>
+            
+            <div class="back-to-home">
+                <a href="admin-login.html"><i class="fas fa-arrow-left"></i> Back to Login</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const createUserForm = document.getElementById('createUserForm');
+            const messageBox = document.getElementById('createUserMessage');
+            const togglePasswordBtn = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            // Toggle password visibility
+            if (togglePasswordBtn && passwordInput) {
+                togglePasswordBtn.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    
+                    // Toggle eye icon
+                    const eyeIcon = this.querySelector('i');
+                    eyeIcon.classList.toggle('fa-eye');
+                    eyeIcon.classList.toggle('fa-eye-slash');
+                });
+            }
+            
+            // Create user form submission
+            if (createUserForm) {
+                createUserForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    const createUserBtn = document.getElementById('createUserBtn');
+                    
+                    // Validate password match
+                    if (password !== confirmPassword) {
+                        showMessage('Passwords do not match!', 'error');
+                        return;
+                    }
+                    
+                    // Validate password strength
+                    if (password.length < 8) {
+                        showMessage('Password must be at least 8 characters long', 'error');
+                        return;
+                    }
+                    
+                    // Disable button and show loading state
+                    createUserBtn.disabled = true;
+                    createUserBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating user...';
+                    
+                    // Create user with Firebase auth
+                    firebase.auth().createUserWithEmailAndPassword(email, password)
+                        .then(function(userCredential) {
+                            const user = userCredential.user;
+                            showMessage(`Admin user created successfully! You can now <a href="admin-login.html">login</a> with these credentials.`, 'success');
+                            createUserForm.reset();
+                        })
+                        .catch(function(error) {
+                            showMessage(error.message, 'error');
+                        })
+                        .finally(function() {
+                            // Reset button
+                            createUserBtn.disabled = false;
+                            createUserBtn.innerHTML = 'Create Admin User';
+                        });
+                });
+            }
+            
+            // Helper function to show messages
+            function showMessage(message, type) {
+                messageBox.innerHTML = message;
+                messageBox.className = `message-box ${type}`;
+                messageBox.style.display = 'block';
+                
+                // Scroll to message
+                messageBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
+            // Check if user is already logged in
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    showMessage(`You're already logged in as ${user.email}. <br>You can go to <a href="admin-messages.html">Admin Messages</a> or <a href="admin-blog.html">Admin Blog</a>.`, 'info');
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        .message-box {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .message-box.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message-box.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .message-box.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .message-box a {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    </style>
+</body>
+</html> 

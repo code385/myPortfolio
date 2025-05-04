@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow all operations for authenticated users - use this temporary solution
+    // until you can deploy more restrictive rules
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allow public read access for blog posts
+    match /blogPosts/{postId} {
+      allow read: if true;
+    }
+    
+    // Allow anyone to create a contact submission
+    match /contactSubmissions/{submissionId} {
+      allow create: if true;
+    }
+    
+    // Allow anyone to subscribe to the newsletter
+    match /newsletterSubscribers/{subscriberId} {
+      allow create: if true;
+    }
+  }
+} 

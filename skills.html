@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills - Muhammad Irfan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-skills.css">
+    <link rel="stylesheet" href="css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Muhammad<span>Irfan</span></a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html" class="active">Skills</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work-experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section active">
+        <!-- Skills background shapes for enhanced visual effects -->
+        <div class="skills-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>My Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-intro" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="gradient-text-small">Technical Expertise</h3>
+                    <p>A diverse set of skills focused on web development, mobile applications, and software engineering with a strong foundation in computer science fundamentals.</p>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="gradient-text-small">Programming Languages</h3>
+                    <div class="skills-container">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 95%"></div>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Expert level proficiency in HTML5 structure, semantics, and best practices</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%"></div>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Advanced CSS3, animations, transformations, and responsive design techniques</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Strong knowledge of ES6+, DOM manipulation, and asynchronous programming</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <h4>PHP</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%"></div>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Server-side programming with focus on database interactions and form handling</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Data analysis, automation scripts, and backend development experience</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>C++</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Algorithm development, data structures implementation, and problem-solving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="gradient-text-small">Frameworks & Libraries</h3>
+                    <div class="skills-container">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="550">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Component-based UI development with hooks, context API, and state management</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%"></div>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Server-side JavaScript with Express.js for RESTful API development</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="650">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React Native</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Cross-platform mobile application development with native capabilities</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="skill-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h4>Firebase</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%"></div>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Authentication, real-time database, and cloud functions for serverless apps</p>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="750">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>.NET</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-hover-info">
+                                <p>Desktop application development with C# and .NET Framework</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-row" data-aos="fade-up" data-aos-delay="800">
+                    <div class="skill-category half-width">
+                        <h3 class="gradient-text-small">Design Tools</h3>
+                        <div class="skills-container">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="850">
+                                <div class="skill-icon">
+                                    <i class="fab fa-adobe" style="color: #31A8FF;"></i>
+                                    <span class="custom-icon">Ps</span>
+                                </div>
+                                <h4>Photoshop</h4>
+                                <div class="skill-hover-info">
+                                    <p>Image editing, manipulation, and graphic design for web assets</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="900">
+                                <div class="skill-icon">
+                                    <i class="fab fa-adobe" style="color: #FF9A00;"></i>
+                                    <span class="custom-icon">Ai</span>
+                                </div>
+                                <h4>Illustrator</h4>
+                                <div class="skill-hover-info">
+                                    <p>Vector graphics and logo design for branding materials</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="950">
+                                <div class="skill-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h4>Corel Draw</h4>
+                                <div class="skill-hover-info">
+                                    <p>Print design and vector illustration for marketing materials</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="1000">
+                                <div class="skill-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h4>Canva</h4>
+                                <div class="skill-hover-info">
+                                    <p>Rapid prototyping and social media content creation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category half-width">
+                        <h3 class="gradient-text-small">Interpersonal Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="1100">
+                                <div class="skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Teamwork</h4>
+                                <div class="skill-hover-info">
+                                    <p>Collaborative project execution with diverse teams</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="1150">
+                                <div class="skill-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h4>Communication</h4>
+                                <div class="skill-hover-info">
+                                    <p>Clear technical and non-technical communication skills</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="1200">
+                                <div class="skill-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <h4>Management</h4>
+                                <div class="skill-hover-info">
+                                    <p>Project planning, resource allocation, and deadline tracking</p>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="1250">
+                                <div class="skill-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>Problem Solving</h4>
+                                <div class="skill-hover-info">
+                                    <p>Analytical thinking and creative solution development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Skills Summary -->
+                <div class="skills-summary" data-aos="fade-up">
+                    <div class="summary-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="summary-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="summary-number">6+</div>
+                        <div class="summary-text">Programming Languages</div>
+                    </div>
+                    
+                    <div class="summary-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="summary-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="summary-number">10+</div>
+                        <div class="summary-text">Projects Completed</div>
+                    </div>
+                    
+                    <div class="summary-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="summary-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="summary-number">3+</div>
+                        <div class="summary-text">Years Experience</div>
+                    </div>
+                    
+                    <div class="summary-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="summary-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="summary-number">5+</div>
+                        <div class="summary-text">Certifications</div>
+                    </div>
+                </div>
+                
+                <!-- Skills CTA -->
+                <div class="skills-cta" data-aos="fade-up" data-aos-delay="500">
+                    <a href="projects.html" class="btn">View My Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Muhammad<span>Irfan</span></h3>
+                        <p>Computer Science Student & Developer</p>
+                    </div>
+                    <p class="footer-desc">I'm passionate about creating clean, efficient, and user-friendly digital experiences. Let's collaborate to bring your ideas to life with modern and innovative solutions.</p>
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="mailto:ranairfan1074@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://web.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Web Development</li>
+                        <li><i class="fas fa-chevron-right"></i> Mobile App Development</li>
+                        <li><i class="fas fa-chevron-right"></i> UI/UX Design</li>
+                        <li><i class="fas fa-chevron-right"></i> Desktop Application</li>
+                        <li><i class="fas fa-chevron-right"></i> Project Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="work-experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ranairfan1074@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92-301-3900245</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Muhammad Irfan. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS animation library
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out',
+                once: false,
+                mirror: false,
+                anchorPlacement: 'top-bottom',
+            });
+            
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('.menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+            
+            // Animate progress bars
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            // Function to animate progress bars when they become visible
+            function animateProgressBars() {
+                progressBars.forEach(bar => {
+                    const rect = bar.getBoundingClientRect();
+                    const isVisible = (
+                        rect.top >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                    );
+                    
+                    if (isVisible) {
+                        const width = bar.style.width;
+                        // Reset first to trigger animation
+                        bar.style.width = '0%';
+                        // Use setTimeout to trigger the animation
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    }
+                });
+            }
+            
+            // Initial animation
+            setTimeout(animateProgressBars, 500);
+            
+            // Animate on scroll
+            window.addEventListener('scroll', animateProgressBars);
+            
+            // Initialize tooltips for skill cards
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('active');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('active');
+                });
+            });
+            
+            // Animate numbers in summary section
+            const countElements = document.querySelectorAll('.summary-number');
+            
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    obj.innerHTML = value + (obj.innerText.includes('+') ? '+' : '');
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            
+            function animateCounters() {
+                countElements.forEach(valueDisplay => {
+                    const rect = valueDisplay.getBoundingClientRect();
+                    const isVisible = (
+                        rect.top >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                    );
+                    
+                    if (isVisible && !valueDisplay.classList.contains('animated')) {
+                        valueDisplay.classList.add('animated');
+                        const endValue = parseInt(valueDisplay.innerText);
+                        animateValue(valueDisplay, 0, endValue, 1500);
+                    }
+                });
+            }
+            
+            // Initialize counter animation
+            setTimeout(animateCounters, 500);
+            
+            // Animate counters on scroll
+            window.addEventListener('scroll', animateCounters);
+        });
+    </script>
+</body>
+</html> 

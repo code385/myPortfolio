@@ -1,0 +1,297 @@
+/* Enhanced Header Section Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    height: 70px;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    height: 100%;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111827; /* Dark color for logo text */
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.logo a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.logo a span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    color: #111827; /* Black color for nav links */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Menu button - consistent styling across all pages */
+.menu-btn {
+    display: none !important; /* Hide by default on all screens */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000; /* Increased to ensure it's above all content */
+    margin-left: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(59, 130, 246, 0.85);
+    border: 2px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: menuPulse 3s infinite;
+}
+
+@keyframes menuPulse {
+    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+.menu-btn::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(135deg, 
+        rgba(59, 130, 246, 0.2) 0%, 
+        rgba(139, 92, 246, 0.4) 50%,
+        rgba(59, 130, 246, 0.2) 100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: scale(0);
+    border-radius: 50%;
+}
+
+.menu-btn:hover::before,
+.menu-btn.active::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-btn i {
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover i,
+.menu-btn.active i {
+    transform: scale(1.1);
+}
+
+.menu-btn.active {
+    background-color: rgba(139, 92, 246, 0.85);
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Ensure consistent styling across different page states */
+header.scrolled .menu-btn {
+    background-color: rgba(59, 130, 246, 0.9);
+}
+
+header.scrolled .menu-btn.active {
+    background-color: rgba(139, 92, 246, 0.9);
+}
+
+/* Mobile Nav Links styling */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: rgba(15, 23, 42, 0.95); /* Dark background for mobile menu */
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 999; /* Just below the menu button */
+        border-left: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-links a {
+        color: #f9fafb; /* Light color for text on dark background */
+        font-size: 1.1rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-links a::after {
+        background: #f9fafb; /* Light underline on dark background */
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--primary-color);
+    }
+    
+    .menu-btn {
+        display: flex !important; /* Show on mobile screens */
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-color: rgba(59, 130, 246, 0.2);
+        border: 1px solid rgba(59, 130, 246, 0.4);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        margin-left: auto;
+        animation: menuPulse 2s infinite;
+        z-index: 1001;
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+/* Enhanced header animations */
+.logo a {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.3) 50%, 
+        rgba(255,255,255,0) 100%);
+    animation: logoShine 3s infinite;
+}
+
+@keyframes logoShine {
+    0% {
+        left: -100%;
+    }
+    20%, 100% {
+        left: 100%;
+    }
+}
+
+/* Animated Underline for Nav Items */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(17, 24, 39, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Active page indicator */
+.nav-links a.active {
+    font-weight: 600;
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(1);
+} 

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Muhammad Irfan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-projects.css">
+    <link rel="stylesheet" href="css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Muhammad<span>Irfan</span></a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work-experience.html">Experience</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section active">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>My Projects</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <!-- Projects content starts here -->
+            <div class="projects-intro" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="gradient-text-small">Creative Portfolio</h3>
+                <p>Explore a collection of my recent projects showcasing my skills in web development, software engineering, and UI/UX design.</p>
+            </div>
+            
+            <div class="projects-filter-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-tabs">
+                    <div class="project-tab active" data-filter="all">All Projects</div>
+                    <div class="project-tab" data-filter="web">Web Development</div>
+                    <div class="project-tab" data-filter="app">Mobile Apps</div>
+                    <div class="project-tab" data-filter="design">UI/UX Design</div>
+                    <div class="project-tab" data-filter="other">Other</div>
+                </div>
+                <div class="project-search">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="projectSearch" placeholder="Search projects...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-categories">
+                <div class="project-category active" data-category="all">
+                    <div class="projects-grid">
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tags="desktop,development,database">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                                         alt="Room Allotment System"
+                                         loading="lazy"
+                                         width="1350"
+                                         height="900">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Desktop Application</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Room Allotment System</h3>
+                                        <div class="project-year">2022</div>
+                                    </div>
+                                    <p>Developed a Room Allotment System using C# and .NET Framework as part of a fourth-semester academic project.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Room assignment & availability checks</li>
+                                            <li><i class="fas fa-check-circle"></i> Student data management system</li>
+                                            <li><i class="fas fa-check-circle"></i> User-friendly admin interface</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>C#</span>
+                                        <span>.NET</span>
+                                        <span>SQL</span>
+                                        <span>Windows Forms</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>System Overview</h4>
+                                    <p>The Room Allotment System is a comprehensive solution for managing dormitory or hostel room assignments. It streamlines the process of allocating rooms to students while maintaining detailed records of occupancy and availability.</p>
+                                    <h4>Development Details</h4>
+                                    <p>Built using C# and .NET Framework with Windows Forms for the UI. Implemented a SQL Server database for data persistence with stored procedures for efficient data retrieval and manipulation. Included reporting capabilities using Crystal Reports.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Desktop Development</span>
+                                        <span class="project-detailed-tag">C# Programming</span>
+                                        <span class="project-detailed-tag">Database Design</span>
+                                        <span class="project-detailed-tag">Windows Forms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tags="hardware,electronics,embedded">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="./assets/carparking.jpg">
+                                    <div class="project-overlay">
+                                        <div class="project-type">IoT / Hardware</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Car Parking Counter System</h3>
+                                        <div class="project-year">2023</div>
+                                    </div>
+                                    <p>Developed a Car Parking Counter System using Arduino UNO as a part of a 5th-semester DLD project.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Sensor-based vehicle detection</li>
+                                            <li><i class="fas fa-check-circle"></i> Real-time vacancy counter display</li>
+                                            <li><i class="fas fa-check-circle"></i> Automated entry/exit tracking</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>Arduino</span>
+                                        <span>Sensors</span>
+                                        <span>C++</span>
+                                        <span>Electronics</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>Project Description</h4>
+                                    <p>The Car Parking Counter System uses ultrasonic sensors to detect vehicle entry and exit, with a real-time LED display showing available parking spaces. The system includes automatic logging of time and vehicle information.</p>
+                                    <h4>Technical Implementation</h4>
+                                    <p>Built using Arduino UNO with ultrasonic sensors, LED display module, and custom PCB design. The code is written in C++ with optimizations for low power consumption and high reliability.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">IoT</span>
+                                        <span class="project-detailed-tag">Embedded Systems</span>
+                                        <span class="project-detailed-tag">Sensor Technology</span>
+                                        <span class="project-detailed-tag">Real-time Processing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="500" data-tags="web,frontend,design">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="./assets/portfolio.JPG" alt="Portfolio Website">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Web Development</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Portfolio Website</h3>
+                                        <div class="project-year">2023</div>
+                                    </div>
+                                    <p>Designed and developed a responsive portfolio website showcasing my skills, projects, and experience.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Responsive design for all devices</li>
+                                            <li><i class="fas fa-check-circle"></i> Interactive UI with smooth animations</li>
+                                            <li><i class="fas fa-check-circle"></i> Project showcase with filtering</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+                                        <span>Responsive Design</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>Development Process</h4>
+                                    <p>Created this portfolio website from scratch using modern web technologies. Implemented responsive design principles to ensure optimal viewing experience across all device sizes, from mobile phones to large desktop monitors.</p>
+                                    <h4>Technical Highlights</h4>
+                                    <p>Built with semantic HTML5, CSS3 animations, and vanilla JavaScript for optimal performance. Incorporated AOS (Animate On Scroll) library for smooth scroll animations and Firebase for blog functionality and contact form handling.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Frontend Development</span>
+                                        <span class="project-detailed-tag">Responsive Design</span>
+                                        <span class="project-detailed-tag">UI/UX</span>
+                                        <span class="project-detailed-tag">Firebase Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="700" data-tags="web,frontend,game">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="./assets/simon.JPG">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Web Game Development</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Simon Says Game</h3>
+                                        <div class="project-year">2023</div>
+                                    </div>
+                                    <p>Developed an interactive Simon Says memory game with multiple difficulty levels and sound effects.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Multiple difficulty levels</li>
+                                            <li><i class="fas fa-check-circle"></i> Sound and visual effects</li>
+                                            <li><i class="fas fa-check-circle"></i> Score tracking system</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+                                        <span>Web Audio API</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>Game Concept</h4>
+                                    <p>The Simon Says game challenges players' memory by having them repeat increasingly complex sequences of colors and sounds. This web implementation features a sleek design with vibrant colors and engaging sound effects.</p>
+                                    <h4>Technical Implementation</h4>
+                                    <p>Built using vanilla JavaScript for game logic, CSS3 for animations and visual effects, and the Web Audio API for generating game sounds. Implemented advanced features like difficulty settings, score tracking, and local storage for high scores.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Game Development</span>
+                                        <span class="project-detailed-tag">Front-end</span>
+                                        <span class="project-detailed-tag">Interactive Design</span>
+                                        <span class="project-detailed-tag">Web Audio</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CCBS Solution Project -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tags="web,frontend,development">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="./assets/ccbs.jpg">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Frontend Web Development</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>CCBS</h3>
+                                        <div class="project-year">2023</div>
+                                    </div>
+                                    <p>Developed a responsive frontend for a healthcare management system with appointment scheduling and telemedicine features.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Responsive dashboard for patients and doctors</li>
+                                            <li><i class="fas fa-check-circle"></i> Appointment scheduling system</li>
+                                            <li><i class="fas fa-check-circle"></i> Interactive medical records interface</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>React</span>
+                                        <span>Redux</span>
+                                        <span>CSS3</span>
+                                        <span>Material UI</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>Project Background</h4>
+                                    <p>CCBS is a comprehensive healthcare management system designed to streamline the patient care process from appointment scheduling to treatment and follow-up. The platform facilitates communication between patients and healthcare providers.</p>
+                                    <h4>Technical Approach</h4>
+                                    <p>Built using React and Redux for state management, with Material UI for consistent design components. Implemented responsive design patterns to ensure accessibility across devices. Used RESTful APIs to communicate with the backend for real-time data synchronization.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Healthcare Tech</span>
+                                        <span class="project-detailed-tag">React</span>
+                                        <span class="project-detailed-tag">Redux</span>
+                                        <span class="project-detailed-tag">Material UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- NeutriDNA App Project -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tags="mobile,app,health">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <video loop muted preload="metadata" poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                                        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smart-phone-1251-large.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="project-overlay">
+                                        <div class="project-type">Mobile Application</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-video-controls">
+                                        <button class="video-play-pause"><i class="fas fa-play"></i></button>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>NeutriDNA App</h3>
+                                        <div class="project-year">2022</div>
+                                    </div>
+                                    <p>Created a personalized nutrition app that provides diet recommendations based on genetic data analysis.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> DNA-based nutritional analysis</li>
+                                            <li><i class="fas fa-check-circle"></i> Food tracking and recommendations</li>
+                                            <li><i class="fas fa-check-circle"></i> Customized meal planning</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>React Native</span>
+                                        <span>Firebase</span>
+                                        <span>Redux</span>
+                                        <span>Node.js</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>Project Overview</h4>
+                                    <p>NeutriDNA is a mobile application that analyzes genetic data to provide personalized nutrition and health recommendations, helping users optimize their diet based on their unique genetic profile.</p>
+                                    <h4>Development Approach</h4>
+                                    <p>Built using React Native for cross-platform compatibility with a Node.js backend. Integrated with genetic data APIs and implemented machine learning algorithms to generate personalized recommendations.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Healthcare Tech</span>
+                                        <span class="project-detailed-tag">Mobile Development</span>
+                                        <span class="project-detailed-tag">Data Science</span>
+                                        <span class="project-detailed-tag">UI/UX Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Car Parking App Project -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="500" data-tags="mobile,app,utilities">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Car Parking App">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Mobile Application</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Car Parking App</h3>
+                                        <div class="project-year">2022</div>
+                                    </div>
+                                    <p>Developed a mobile app that helps users find, reserve, and pay for parking spaces in urban areas in real-time.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> Real-time parking availability</li>
+                                            <li><i class="fas fa-check-circle"></i> Digital payment integration</li>
+                                            <li><i class="fas fa-check-circle"></i> Navigation to parking spaces</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>React Native</span>
+                                        <span>Node.js</span>
+                                        <span>MongoDB</span>
+                                        <span>Google Maps API</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>App Concept</h4>
+                                    <p>The Car Parking App addresses urban parking challenges by connecting drivers with available parking spaces. Users can locate, reserve, and pay for parking spots through a seamless mobile experience, reducing traffic congestion and driver frustration.</p>
+                                    <h4>Technical Implementation</h4>
+                                    <p>Developed with React Native for the frontend and Node.js for the backend API. Integrated Google Maps API for location services and navigation. Implemented MongoDB for data storage and Socket.IO for real-time updates on parking availability.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">React Native</span>
+                                        <span class="project-detailed-tag">Location Services</span>
+                                        <span class="project-detailed-tag">Real-time Updates</span>
+                                        <span class="project-detailed-tag">Payment Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HomeStylus App Project -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="700" data-tags="mobile,app,design">
+                            <div class="project-card-inner">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="HomeStylus App">
+                                    <div class="project-overlay">
+                                        <div class="project-type">Mobile Application</div>
+                                        <div class="project-links">
+                                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>HomeStylus App</h3>
+                                        <div class="project-year">2023</div>
+                                    </div>
+                                    <p>Developed an augmented reality app that allows users to visualize furniture and decor in their home before purchasing.</p>
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check-circle"></i> AR furniture placement</li>
+                                            <li><i class="fas fa-check-circle"></i> Product catalog integration</li>
+                                            <li><i class="fas fa-check-circle"></i> Room measurements using AR</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span>Swift</span>
+                                        <span>ARKit</span>
+                                        <span>Core ML</span>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="#" class="btn primary-btn project-btn"><span>View Details</span></a>
+                                    </div>
+                                </div>
+                                <!-- Add detailed info section with background image -->
+                                <div class="project-detailed-info">
+                                    <h4>App Innovation</h4>
+                                    <p>HomeStylus revolutionizes furniture shopping by allowing users to visualize products in their actual living spaces before purchase. This AR-powered solution helps consumers make confident buying decisions and reduces return rates for retailers.</p>
+                                    <h4>Development Approach</h4>
+                                    <p>Built using Swift and ARKit for iOS, with seamless 3D model integration. Implemented Core ML for intelligent surface detection and realistic object placement. Firebase provides backend support for user profiles, furniture catalog, and analytics.</p>
+                                    <div>
+                                        <span class="project-detailed-tag">Augmented Reality</span>
+                                        <span class="project-detailed-tag">iOS Development</span>
+                                        <span class="project-detailed-tag">3D Visualization</span>
+                                        <span class="project-detailed-tag">E-commerce</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Projects Category -->
+                <div class="project-category" data-category="web">
+                    <div class="projects-grid">
+                        <!-- Project cards will be filtered dynamically using JavaScript -->
+                        <p class="category-message">Select the "Web Development" filter to see web projects.</p>
+                    </div>
+                </div>
+
+                <!-- Mobile App Projects Category -->
+                <div class="project-category" data-category="app">
+                    <div class="projects-grid">
+                        <!-- Project cards will be filtered dynamically using JavaScript -->
+                        <p class="category-message">Select the "Mobile Apps" filter to see mobile app projects.</p>
+                    </div>
+                </div>
+
+                <!-- Design Projects Category -->
+                <div class="project-category" data-category="design">
+                    <div class="projects-grid">
+                        <!-- Project cards will be filtered dynamically using JavaScript -->
+                        <p class="category-message">Select the "UI/UX Design" filter to see design projects.</p>
+                    </div>
+                </div>
+
+                <!-- Other Projects Category -->
+                <div class="project-category" data-category="other">
+                    <div class="projects-grid">
+                        <!-- Project cards will be filtered dynamically using JavaScript -->
+                        <p class="category-message">Select the "Other" filter to see other projects.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta" data-aos="fade-up">
+                <a href="education.html" class="btn primary-btn"><span>View My Education</span></a>
+                <a href="contact.html" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+        <div class="projects-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Muhammad<span>Irfan</span></h3>
+                        <p>Computer Science Student & Developer</p>
+                    </div>
+                    <p class="footer-desc">I'm passionate about creating clean, efficient, and user-friendly digital experiences. Let's collaborate to bring your ideas to life with modern and innovative solutions.</p>
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="mailto:ranairfan1074@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://web.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Web Development</li>
+                        <li><i class="fas fa-chevron-right"></i> Mobile App Development</li>
+                        <li><i class="fas fa-chevron-right"></i> UI/UX Design</li>
+                        <li><i class="fas fa-chevron-right"></i> Desktop Application</li>
+                        <li><i class="fas fa-chevron-right"></i> Project Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="work-experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ranairfan1074@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92-301-3900245</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Muhammad Irfan. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/projects-animations.js"></script>
+</body>
+</html> 

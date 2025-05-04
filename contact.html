@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Muhammad Irfan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-contact.css">
+    <link rel="stylesheet" href="css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Muhammad<span>Irfan</span></a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work-experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section active">
+        <div class="contact-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="gradient-text-small">Let's Connect</h3>
+                <p>Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:ranairfan1074@gmail.com">ranairfan1074@gmail.com</a></p>
+                        </div>
+                        <div class="contact-blob"></div>
+                    </div>
+                    
+                    <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+923013900245">+92-301-3900245</a></p>
+                        </div>
+                        <div class="contact-blob"></div>
+                    </div>
+                    
+                    <div class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Multan, Pakistan</p>
+                        </div>
+                        <div class="contact-blob"></div>
+                    </div>
+
+                    <div class="contact-social" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Connect With Me</h3>
+                        <div class="social-grid">
+                            <a href="https://github.com" target="_blank" class="social-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-item">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-item">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="form-header">
+                        <h3>Send Me a Message</h3>
+                        <p>I'll get back to you as soon as possible.</p>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <div class="input-animate">
+                                <input type="text" name="name" id="name" required>
+                                <label for="name">Your Name</label>
+                                <span class="input-focus-border"></span>
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-animate">
+                                <input type="email" name="email" id="email" required>
+                                <label for="email">Your Email</label>
+                                <span class="input-focus-border"></span>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-animate">
+                                <input type="text" name="subject" id="subject" required>
+                                <label for="subject">Subject</label>
+                                <span class="input-focus-border"></span>
+                                <i class="fas fa-pen"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-animate textarea">
+                                <textarea name="message" id="message" rows="5" required></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="input-focus-border"></span>
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn primary-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-map" data-aos="fade-up" data-aos-delay="600">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108449.31565094942!2d71.41241789974001!3d30.197687059059623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b33e514cae9d5%3A0xd19132a5626d0aa7!2sMultan%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1718354431270!5m2!1sen!2s" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="map-overlay">
+                        <div class="overlay-content">
+                            <h3>Visit My Location</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Multan, Punjab, Pakistan</p>
+                            <a href="https://www.google.com/maps/place/Multan,+Punjab,+Pakistan/@30.1975843,71.4730593,12z/data=!3m1!4b1!4m6!3m5!1s0x393b33e514cae9d5:0xd19132a5626d0aa7!8m2!3d30.1983807!4d71.4687068!16zL20vMDJsdG1q?entry=ttu" target="_blank" class="btn accent-btn">View on Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Muhammad<span>Irfan</span></h3>
+                        <p>Computer Science Student & Developer</p>
+                    </div>
+                    <p class="footer-desc">I'm passionate about creating clean, efficient, and user-friendly digital experiences. Let's collaborate to bring your ideas to life with modern and innovative solutions.</p>
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="mailto:ranairfan1074@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://web.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Web Development</li>
+                        <li><i class="fas fa-chevron-right"></i> Mobile App Development</li>
+                        <li><i class="fas fa-chevron-right"></i> UI/UX Design</li>
+                        <li><i class="fas fa-chevron-right"></i> Desktop Application</li>
+                        <li><i class="fas fa-chevron-right"></i> Project Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="work-experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ranairfan1074@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92-301-3900245</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Muhammad Irfan. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/contact-animations.js"></script>
+</body>
+</html> 

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Muhammad Irfan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-education.css">
+    <link rel="stylesheet" href="css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Muhammad<span>Irfan</span></a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="work-experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="education section active">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Education</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="education-intro" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="gradient-text-small">Academic Background</h3>
+                <p>My educational journey has equipped me with strong theoretical foundations and practical skills in computer science and related technologies.</p>
+            </div>
+            
+            <div class="education-content">
+                <div class="timeline-wrapper">
+                    <div class="timeline-header" data-aos="fade-right">
+                        <div class="timeline-header-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Academic Qualifications</h3>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2020 - 2024</div>
+                                <h3>B.S Computer Science</h3>
+                                <p class="place"><i class="fas fa-university"></i> BZU, Multan</p>
+                                <div class="education-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">3.70</span>
+                                        <span class="stat-label">CGPA</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">B</span>
+                                        <span class="stat-label">Grade</span>
+                                    </div>
+                                </div>
+                                <div class="education-highlights">
+                                    <span>Computer Science</span>
+                                    <span>Software Engineering</span>
+                                    <span>Database Systems</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content right">
+                                <div class="timeline-date">2018 - 2020</div>
+                                <h3>F.Sc (Pre Medical)</h3>
+                                <p class="place"><i class="fas fa-university"></i> Kips College, Multan</p>
+                                <div class="education-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">93%</span>
+                                        <span class="stat-label">Percentage</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">A</span>
+                                        <span class="stat-label">Grade</span>
+                                    </div>
+                                </div>
+                                <div class="education-highlights">
+                                    <span>Biology</span>
+                                    <span>Chemistry</span>
+                                    <span>Physics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2016 - 2018</div>
+                                <h3>Matriculation</h3>
+                                <p class="place"><i class="fas fa-university"></i> BISE DG Khan</p>
+                                <div class="education-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">98%</span>
+                                        <span class="stat-label">Percentage</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">A</span>
+                                        <span class="stat-label">Grade</span>
+                                    </div>
+                                </div>
+                                <div class="education-highlights">
+                                    <span>Mathematics</span>
+                                    <span>Computer Science</span>
+                                    <span>English</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="courses-wrapper" data-aos="fade-up">
+                    <div class="section-subtitle" data-aos="fade-up">
+                        <h3 class="gradient-text-small">Professional Courses</h3>
+                        <p>Specialized training and coursework that have expanded my technical capabilities.</p>
+                    </div>
+                    
+                    <div class="courses-container">
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="100">
+                            <div class="course-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Data Structure And Algorithm</h3>
+                            <div class="course-details">
+                                <p>Mastered advanced data structures and algorithm design techniques essential for efficient problem-solving.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="200">
+                            <div class="course-icon">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <h3>Design And Analysis of Algorithm</h3>
+                            <div class="course-details">
+                                <p>Learned techniques for designing and analyzing algorithm efficiency, complexity theory, and optimization approaches.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="300">
+                            <div class="course-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3>.NET Desktop App Development</h3>
+                            <div class="course-details">
+                                <p>Developed Windows applications using C# and the .NET Framework with focus on UI design and database integration.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="400">
+                            <div class="course-icon">
+                                <i class="fab fa-windows"></i>
+                            </div>
+                            <h3>Operating System</h3>
+                            <div class="course-details">
+                                <p>Studied operating system principles including process management, memory allocation, and file systems.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="500">
+                            <div class="course-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <div class="course-details">
+                                <p>Created responsive websites using modern front-end frameworks and back-end technologies.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-aos="flip-up" data-aos-delay="600">
+                            <div class="course-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>App Development</h3>
+                            <div class="course-details">
+                                <p>Developed mobile applications for Android and iOS platforms using React Native and native technologies.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                    <span><i class="fas fa-certificate"></i> BZU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-cta" data-aos="fade-up">
+                    <a href="projects.html" class="btn primary-btn"><span>View My Projects</span></a>
+                    <a href="contact.html" class="btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="education-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Muhammad<span>Irfan</span></h3>
+                        <p>Computer Science Student & Developer</p>
+                    </div>
+                    <p class="footer-desc">I'm passionate about creating clean, efficient, and user-friendly digital experiences. Let's collaborate to bring your ideas to life with modern and innovative solutions.</p>
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="mailto:ranairfan1074@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://web.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Web Development</li>
+                        <li><i class="fas fa-chevron-right"></i> Mobile App Development</li>
+                        <li><i class="fas fa-chevron-right"></i> UI/UX Design</li>
+                        <li><i class="fas fa-chevron-right"></i> Desktop Application</li>
+                        <li><i class="fas fa-chevron-right"></i> Project Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="work-experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ranairfan1074@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92-301-3900245</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Muhammad Irfan. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/education-animations.js"></script>
+</body>
+</html> 

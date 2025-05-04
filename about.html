@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Muhammad Irfan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-about.css">
+    <link rel="stylesheet" href="css/mobile-menu-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Muhammad<span>Irfan</span></a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work-experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section active">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-intro" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="gradient-text-small">Professional Profile</h3>
+                <p>A motivated Computer Science student with solid technical skills and a passion for creating innovative digital solutions.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-frame animated-border"></div>
+                    <div class="image-glow"></div>
+                    <div class="profile-image">
+                        <img src="assets/irfan2.jpg" alt="Muhammad Irfan">
+                    </div>
+                    <div class="about-floating-shapes">
+                        <div class="shape shape-1"><i class="fas fa-code"></i></div>
+                        <div class="shape shape-2"><i class="fas fa-laptop-code"></i></div>
+                        <div class="shape shape-3"><i class="fas fa-brain"></i></div>
+                        <div class="shape shape-4"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <a href="projects.html" class="btn accent-btn">View Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="gradient-text-small">Driven Computer Science Professional</h3>
+                    <p class="about-intro"><span class="highlight">As a Computer Science graduate</span> from BZU Multan, I bring strong programming fundamentals, robust software development skills, and a problem-solving mindset to every project.</p>
+                    <p>My journey in technology is fueled by a passion for creating efficient, user-centric solutions that make a difference. I leverage my technical knowledge and creative thinking to develop applications that are not only functional but also provide exceptional user experiences.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Web Development</h4>
+                                <p>Crafting responsive and engaging web experiences with modern frameworks and clean code.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Mobile Applications</h4>
+                                <p>Building cross-platform mobile apps that deliver seamless experiences across devices.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="about-info">
+                        <div class="info-title" data-aos="fade-up" data-aos-delay="250">
+                            <h4>Personal Information</h4>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                                <span>Name:</span>
+                                <p>Muhammad Irfan</p>
+                            </div>
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="350">
+                                <span>Email:</span>
+                                <p><a href="mailto:ranairfan1074@gmail.com">ranairfan1074@gmail.com</a></p>
+                            </div>
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                                <span>Phone:</span>
+                                <p><a href="tel:+923013900245">+92-301-3900245</a></p>
+                            </div>
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="450">
+                                <span>Location:</span>
+                                <p>Multan, Pakistan</p>
+                            </div>
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                                <span>Languages:</span>
+                                <p>Urdu, English, Punjabi</p>
+                            </div>
+                            <div class="info-item" data-aos="fade-up" data-aos-delay="550">
+                                <span>Freelance:</span>
+                                <p>Available</p>
+                            </div>
+                            <button id="enable-notifications" class="btn accent-btn notification-btn">
+                                <i class="fas fa-bell"></i> <span class="notify-text">Notify Me</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta" data-aos="fade-up" data-aos-delay="600">
+                        <a href="contact.html" class="btn primary-btn"><span>Contact Me</span></a>
+                        <a href="skills.html" class="btn secondary-btn">View Skills</a>
+                        <a href="assets/pdf/1.pdf" target="_blank" download class="btn accent-btn download-btn"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Muhammad<span>Irfan</span></h3>
+                        <p>Computer Science Student & Developer</p>
+                    </div>
+                    <p class="footer-desc">I'm passionate about creating clean, efficient, and user-friendly digital experiences. Let's collaborate to bring your ideas to life with modern and innovative solutions.</p>
+                    <div class="footer-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="mailto:ranairfan1074@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://web.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> Web Development</li>
+                        <li><i class="fas fa-chevron-right"></i> Mobile App Development</li>
+                        <li><i class="fas fa-chevron-right"></i> UI/UX Design</li>
+                        <li><i class="fas fa-chevron-right"></i> Desktop Application</li>
+                        <li><i class="fas fa-chevron-right"></i> Project Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="skills.html"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="work-experience.html"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ranairfan1074@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92-301-3900245</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Multan, Pakistan</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Muhammad Irfan. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            offset: 100,
+            delay: 100
+        });
+        
+        // Request permission and get FCM token
+        async function enableNotifications() {
+            try {
+                const messaging = firebase.messaging();
+                await Notification.requestPermission();
+                const token = await messaging.getToken({
+                    vapidKey: "BHqSI1MfuHymXR3kwVIugsIpcltsF2VJU3iah7G6LSNgm-FIb5GBNvyWcBLw2JOmzPmk70OT8g66ZsPQzhC43zk" // Your copied key
+                });
+                
+                // Store token in Firestore
+                await db.collection('notificationTokens').add({
+                    token: token,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                
+                alert('Notifications enabled! You will now receive updates.');
+                console.log('Notification permission granted');
+            } catch (error) {
+                console.error('Could not get notification permission', error);
+                alert('Could not enable notifications. Please make sure notifications are allowed in your browser settings.');
+            }
+        }
+
+        // Add button event listener for notifications
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationBtn = document.getElementById('enable-notifications');
+            if (notificationBtn) {
+                notificationBtn.addEventListener('click', enableNotifications);
+            }
+            
+            // Make profile image clickable to view portfolio
+            const profileImage = document.querySelector('.profile-image');
+            if (profileImage) {
+                profileImage.addEventListener('click', function() {
+                    window.location.href = 'projects.html';
+                });
+            }
+            
+            // Handle CV download button click
+            const downloadBtn = document.querySelector('.download-btn');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    // Add animation effect
+                    this.classList.add('downloading');
+                    setTimeout(() => {
+                        this.classList.remove('downloading');
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+
+    <style>
+    .notification-btn {
+        margin-left: 15px;
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        background: linear-gradient(to right, var(--accent-color), #ed8936);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .notification-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
+    }
+
+    .notification-btn i {
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .notify-text {
+            display: none;
+        }
+        
+        .notification-btn {
+            padding: 0.6rem;
+        }
+    }
+    </style>
+</body>
+</html> 
+
+
+
