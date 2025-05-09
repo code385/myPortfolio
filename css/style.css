@@ -631,18 +631,18 @@ header:not(.scrolled) .menu-btn {
 .hero-image {
     position: relative;
     opacity: 0;
-    animation: fadeInRight 1s ease-out forwards;
-    animation-delay: 0.5s;
+    /* animation: fadeInRight 1s ease-out forwards;
+    animation-delay: 0.5s; */
 }
 
 .image-container {
     position: relative;
-    width: 380px;
-    height: 380px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    animation: morph 8s ease-in-out infinite, float 6s ease-in-out infinite;
+    /* animation: morph 8s ease-in-out infinite, float 6s ease-in-out infinite; */
     border: 5px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
